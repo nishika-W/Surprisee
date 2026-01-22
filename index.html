@@ -1,35 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Surprise</title>
-<style>
-body{
-  margin:0;
-  background:#111;
-  color:#fff;
-  font-family:system-ui, sans-serif;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:100vh;
-  text-align:center;
-}
-.box{
-  animation:pulse 1.5s infinite;
-}
-@keyframes pulse{
-  0%{opacity:.5}
-  50%{opacity:1}
-  100%{opacity:.5}
-}
-</style>
+  <title>Tap Again 😉</title>
+  <style>
+    body {
+      background: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-<div class="box">
-  <h1>👀 Tap again</h1>
-  <p>for a surprise…</p>
-</div>
+
+<h1 id="text">Tap again for surprise 👀</h1>
+
+<script>
+  let tapped = localStorage.getItem("tapped");
+
+  if (tapped) {
+    // SECOND TAP → redirect
+    localStorage.removeItem("tapped");
+    window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+  } else {
+    // FIRST TAP → show message
+    localStorage.setItem("tapped", "true");
+  }
+</script>
+
 </body>
 </html>
