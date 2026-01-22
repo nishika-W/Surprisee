@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surprise</title>
+<style>
+body{
+  margin:0;
+  background:#111;
+  color:#fff;
+  font-family:system-ui, sans-serif;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  text-align:center;
+}
+.box{
+  animation:pulse 1.5s infinite;
+}
+@keyframes pulse{
+  0%{opacity:.5}
+  50%{opacity:1}
+  100%{opacity:.5}
+}
+</style>
+</head>
+<body>
+<div class="box">
+  <h1>👀 Tap again</h1>
+  <p>for a surprise…</p>
+</div>
+</body>
+</html>
